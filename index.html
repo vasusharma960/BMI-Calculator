@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1 class="heading">BMI Calculator</h1>
+    <h3 class="description">Body mass index, or BMI, is a measure of body size. It combines a person’s weight with their height.
+      The results of a BMI measurement can give an idea about whether a person has the correct weight for their height.<br>
+      The following table shows standard weight status categories associated with BMI ranges for adults. </h3>
+
+      <table>
+        <tr>
+          <th>BMI</th>
+          <th>Weight Status</th>
+        </tr>
+        <tr>
+          <td>Below 18.5</td>
+          <td class="underweight">Underweight</td>
+        </tr>
+        <tr>
+          <td>18.5 - 24.9</td>
+          <td class="healthy">Healthy</td>
+        </tr>
+        <tr>
+          <td>25.0 - 29.9</td>
+          <td class="overweight">Overweight</td>
+        </tr>
+        <tr>
+          <td>30 and above</td>
+          <td class="obese">Obese</td>
+        </tr>
+      </table>
+
+      <h3 class="description">Use the tool below to compute your BMI</h3>
+
+      <div class="calculator">
+        <form class="tool" action="index.html" method="post">
+          <br><br>
+          <select id="unit" class="values" onchange="changeUnit()">
+            <option value="" disabled selected>Select Unit</option>
+            <option value="Metric">Metric</option>
+            <option value="Imperial">Imperial</option>
+         </select><br><br>
+          <input class="values" id="weight" type="number" name="weight" placeholder="Weight"><br><br>
+          <input class="values" id="height" type="number" name="height" placeholder="Height"><br><br>
+          <button onclick="compute()" type="button" name="button" value="submit">Compute</button>
+        </form>
+        <br>
+
+        <p id="hidden">Your BMI is <span><p id="result"></p></span></p>
+      </div>
+
+      <script src="script.js"></script>
+  </body>
+</html>
